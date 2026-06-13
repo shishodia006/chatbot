@@ -17,7 +17,7 @@ def get_gemini_api_key() -> str | None:
 
 
 def get_gemini_model() -> str:
-    return os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+    return os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 
 def get_telegram_bot_token() -> str | None:

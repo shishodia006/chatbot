@@ -28,6 +28,27 @@ streamlit run run_app.py
 
 Uses in-browser session history only (no database).
 
+## Deploy the web app on Streamlit Community Cloud
+
+1. Push the project to GitHub.
+2. Open [share.streamlit.io](https://share.streamlit.io/) and sign in with GitHub.
+3. Select **Create app** and enter:
+   - Repository: `shishodia006/chatbot`
+   - Branch: `main`
+   - Main file path: `run_app.py`
+4. Open **Advanced settings** and add these secrets:
+
+   ```toml
+   GEMINI_API_KEY = "your_gemini_api_key"
+   GEMINI_MODEL = "gemini-3.5-flash"
+   ```
+
+5. Choose Python 3.12 and click **Deploy**.
+
+Do not commit `.env` or `.streamlit/secrets.toml`. Root-level Streamlit secrets
+are exposed to the app as environment variables, so the existing configuration
+works without code changes.
+
 ## Run Telegram bot
 
 ```bash
@@ -98,7 +119,7 @@ Tables are created automatically on first message.
 | `DATABASE_URL` | Optional | Supabase connection string |
 | `ENV` | Optional | `development` or `production` |
 | `PORT` | Optional | Default: `8000` |
-| `GEMINI_MODEL` | Optional | Default: `gemini-2.0-flash` |
+| `GEMINI_MODEL` | Optional | Default: `gemini-3.5-flash` |
 
 ## Project structure
 
