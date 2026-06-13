@@ -1,0 +1,1 @@
+"""Automat product chatbot application."""
